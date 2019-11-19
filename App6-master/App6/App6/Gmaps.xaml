@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:map="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             mc:Ignorable="d"
+             x:Class="App6.Gmaps">
+
+    <Grid>
+        <map:Map x:Name="MyMap" MapType="Street" HasZoomEnabled="True" IsShowingUser="True" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,  
+                    Property=Width,Factor=1}" RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,  
+                    Property=Height,Factor=1}">
+            <map:Map.ItemTemplate>
+                <DataTemplate>
+                    <map:Pin Position="{Binding Position}"
+                              Address="{Binding Address}"
+                              Label="{Binding PlaceName}" />
+                </DataTemplate>
+            </map:Map.ItemTemplate>
+        </map:Map>
+        <Image Source="locationOn.png" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,  
+                          ElementName=formMap,Property=Height,Factor=0.75}" RelativeLayout.XConstraint="{ConstraintExpression  
+                          Type=RelativeToView,ElementName=formMap,Property=Width,Factor=0.84}" HeightRequest="60" WidthRequest="60">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="MoveToCurrentlocation"/>
+            </Image.GestureRecognizers>
+        </Image>
+    </Grid>
+
+</ContentPage>

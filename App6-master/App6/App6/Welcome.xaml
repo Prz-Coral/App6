@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App6.Welcome">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label FontSize="Title" Text="Welcome" FontAttributes="Bold" x:Name="title1"></Label>
+            <Button Text="Proceed to Google Maps" Clicked="Button_Clicked"></Button>
+            <Button Text="Bluetooth" Clicked="Button_Clicked_1"></Button>
+            <Button Text="Message" Clicked="Button_Clicked_2"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
